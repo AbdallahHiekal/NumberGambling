@@ -23,4 +23,4 @@ response body:
   "userId": 8
 }
 
-NOTE: if the userId doesn't exists the API would Create new user and send the userId with the response.
+NOTE: if the userId doesn't exists the API would Create new user and send the new userId with the response.
