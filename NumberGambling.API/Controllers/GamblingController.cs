@@ -30,8 +30,7 @@ namespace NumberGambling.API.Controllers
             var user = await _userService.GetUserAsync(model.UserId);
             if(user == null) 
             {
-                user = new User();
-                await _userService.AddUserAsync(user);
+                await _userService.AddUserAsync();
             }
 
             GamblingResult result  = await _gamblingService.PerformGambling(user, model.Points, model.Number);

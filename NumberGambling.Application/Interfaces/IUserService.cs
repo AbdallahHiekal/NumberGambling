@@ -11,7 +11,7 @@ namespace NumberGambling.Application.Interfaces
     {
         public Task<IEnumerable<User>> GetUsersAsync();
         public Task<User> GetUserAsync(int id);
-        public Task<bool> AddUserAsync(User User);
+        public Task<User> AddUserAsync();
         public Task<bool> UpdateUserAsync(User User);
         public Task<bool> DeleteUserAsync(int id);
     }

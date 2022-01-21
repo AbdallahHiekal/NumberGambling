@@ -25,11 +25,13 @@ namespace NumberGambling.Application.Services
         {
             return await _UserRepository.GetUsersAsync();
         }
-        public async Task<bool> AddUserAsync(User User)
+        public async Task<User> AddUserAsync()
         {
-            var addUser = new AddUserCommand(User);
+            User user = new User();
+            var addUser = new AddUserCommand(user);
             var result = await _bus.SendCommand(addUser);
-            return result;
+            if (result) return user;
+            return null;
         }
 
         public async Task<bool> UpdateUserAsync(User User)
