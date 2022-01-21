@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NumberGambling.Application\NumberGambling.Application.csproj" />
+    <ProjectReference Include="..\NumberGambling.Data\NumberGambling.Infra.Data.csproj" />
+    <ProjectReference Include="..\NumberGambling.Domain.Core\NumberGambling.Domain.Core.csproj" />
+    <ProjectReference Include="..\NumberGambling.Infra.Bus\NumberGambling.Infra.Bus.csproj" />
+  </ItemGroup>
+
+</Project>
